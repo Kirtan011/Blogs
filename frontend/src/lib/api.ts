@@ -19,7 +19,7 @@ export const getAllPosts = async (page = 1, search = "", category = "") => {
   const url = `/api/blogs?populate=*&pagination[page]=${page}&pagination[pageSize]=6${searchFilter}${categoryFilter}`;
 
   const res = await api.get(url);
-
+console.log(`https://blogs-297z.onrender.com/${url}`);
   return {
     posts: res.data.data,
     pagination: res.data.meta.pagination,
